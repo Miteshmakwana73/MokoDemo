@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_3"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/lnActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/iv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/_14sdp"
+            android:src="@drawable/refresh" />
+
+        <TextView
+            android:id="@+id/tvDeviceNum"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="Devices"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            tools:text="Devices" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDevices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/_50sdp"
+        android:scrollbars="none"
+        android:layout_below="@id/lnActionBar"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/list_item_device" />
+
+</RelativeLayout>

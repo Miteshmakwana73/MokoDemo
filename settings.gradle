@@ -1,0 +1,3 @@
+include ':mokosupport'
+include ':app'
+rootProject.name = "MokoDemo"
